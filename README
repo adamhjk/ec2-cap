@@ -17,6 +17,9 @@ Configure:
 		
 	I started with the Ubuntu Hardy AMIs.
 	
+	Make sure you populate the icagent directory of this checkout to contain your particular
+	icagent recipes - they will be copied to the AMI at creation.
+	
 Use:
 
 	Create new EC2 instances:

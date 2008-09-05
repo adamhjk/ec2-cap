@@ -229,7 +229,7 @@ end
 
 task :update_icagent_recipes, :roles => [ :new_nodes ] do
   sudo("rm -f /srv/icagent/icagent/*")
-  Dir[File.join(File.dirname(__FILE__), '..', '..', 'files', 'dists', 'iclassify', 'default', 'icagent', '*.rb')].sort.each do |file|
+  Dir[File.join(File.dirname(__FILE__), '..', '..', 'icagent', '*.rb')].sort.each do |file|
     basename = File.basename(file)
     logger.debug("Updating #{basename} icagent recipe")
     run("mkdir -p /tmp/icagent")
