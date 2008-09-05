@@ -1,0 +1,21 @@
+
+Manages EC2 nodes with Capistrano, iClassify and Puppet.
+
+Requires:
+
+	capistrano 2+
+	right_aws (gem install right_aws)
+
+Configure:
+
+	First, populate the config/ec2.rb file with your EC2 info, iClassify URI, and the location of your puppet server.
+	
+  Update the ec2/simple.rb with an Ubuntu AMI, pre-configured with:
+
+		1. An authentication scheme that matches your puppet master (users with matching passwords)
+		2. icagent, facter and puppet
+		
+	I started with the Ubuntu Hardy AMIs.
+	
+	
+	
