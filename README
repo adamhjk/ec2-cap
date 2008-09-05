@@ -17,5 +17,22 @@ Configure:
 		
 	I started with the Ubuntu Hardy AMIs.
 	
+Use:
+
+	Create new EC2 instances:
 	
+	  cap -S host_type=simple create
+		cap -S host_type=simple -S number=10 # launch 10 instances
+		
+	Terminate EC2 instances:
+		
+		cap QUERY="ec2:true" terminate # kill all ec2 nodes in iClassify
+		cap QUERY="tag:monkey" terminate # kill all the monkey servers
+		
+	Describe running instances:
+	
+		cap describe_instances
+		
+
+		
 	
