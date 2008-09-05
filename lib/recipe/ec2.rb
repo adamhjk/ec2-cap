@@ -199,7 +199,7 @@ task :set_hostname, :roles => [ :new_nodes ] do
   )
   sudo("chmod a+x /tmp/set-ec2-hostname.sh")
   sudo("/tmp/set-ec2-hostname.sh")
-  hjk.load_facts
+  load_facts
   @dns_names[0] = facter_fqdn
 end
 
